@@ -22,3 +22,10 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# Webstorm
+*.iml
+
+.idea/
+.idea/workspace.xml
+**/.idea/workspace.xml
