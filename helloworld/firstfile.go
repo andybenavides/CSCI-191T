@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	uuid "github.com/nu7hatch/gouuid"
+)
 
-func main(){
+func main() {
 	fmt.Println("Hello, world!")
 }
