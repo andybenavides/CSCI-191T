@@ -4,13 +4,12 @@ import "fmt"
 
 func main() {
 
-	Sum(1, 2, 3, 4)
+	Sum(93451, 232, 223, 423)
 
 }
 
-func Sum(num1 int, num2 ...int){
+func Sum(num2 ...int){
 	sum := 0
-	sum = num1
 
 	for _, value := range num2{
 		sum += value
