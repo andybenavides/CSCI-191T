@@ -4,10 +4,10 @@ import "fmt"
 
 func main() {
 	a := []int{23, 53, 543, 2}
-	sum(a)
+	sum(a...)
 }
 
-func sum(a []int){
+func sum(a ...int){
 	total := 0
 
 	for _, value := range a{
