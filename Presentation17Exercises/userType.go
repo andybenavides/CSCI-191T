@@ -11,3 +11,5 @@ func main() {
 	fmt.Println(myType)
 	fmt.Printf("%T\n", myType)
 }
+
+// underlying type for myType is int
