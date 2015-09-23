@@ -8,4 +8,5 @@ func main() {
 	}
 
 	greeting("Andy")
+	fmt.Printf("%T\n", greeting)
 }
