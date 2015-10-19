@@ -5,6 +5,8 @@ import (
 	"github.com/golang/appengine"
 	"github.com/golang/appengine/datastore"
 	"fmt"
+	"html/template"
+	"log"
 )
 
 func init(){
@@ -36,18 +38,15 @@ func handleIndex(res http.ResponseWriter, req *http.Request){
 			return
 		}
 	}
-	res.Header().Set("Content-Type", "text/html")
-	fmt.Fprintf(res, `
-	<h2>Hello there...</h2>
-		<form method="POST" action="/new_person/">
-			Enter your name<input type="text" name="name">
-			Enter your birth year<input type="text" name="birthYear">
-			<input type="submit">
-		</form>
-		<form method="POST" action="/view/">
-			Click to view birthyears <input type="submit">
-		</form>
-		`)
+	tpl, err := template.ParseFiles("home.html")
+	if err != nil{
+		log.Fatalln(err)
+	}
+
+	err = tpl.ExecuteTemplate(res, "home.html", nil)
+	if err != nil {
+		http.Error(res, err.Error(), 500)
+	}
 }
 
 func view(res http.ResponseWriter, req *http.Request){
