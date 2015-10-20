@@ -11,6 +11,7 @@ import (
 
 func init(){
 	http.HandleFunc("/", handleIndex)
+	http.HandleFunc("/new_person/", handleIndex)
 	http.HandleFunc("/view/", view)
 }
 
