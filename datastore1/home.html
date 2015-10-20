@@ -13,13 +13,13 @@
 	<h2>Hello there...</h2>
 	<form method="POST" class="style-5">
 		<ul>
-			Enter your name <input type="text" name="name"><br>
-			Enter your birth year <input type="text" name="birthYear"><br>
+			Enter your name <input type="text" name="name" autofocus required><br>
+			Enter your birth year <input type="text" name="birthYear" required><br>
 			<input type="submit">
 		</ul>
 	</form>
 	<form method="POST" action="/view/">
-		Click to view birthyears <input type="submit">
+		<input type="submit" value="View Birthyears" class="view">
 	</form>
 </div>
 </body>

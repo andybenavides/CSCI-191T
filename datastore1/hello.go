@@ -4,7 +4,6 @@ import (
 	"net/http"
 	"github.com/golang/appengine"
 	"github.com/golang/appengine/datastore"
-	"fmt"
 	"html/template"
 	"log"
 )
@@ -66,17 +65,16 @@ func view(res http.ResponseWriter, req *http.Request){
 			http.Error(res, err.Error(), 500)
 			return
 		}
-		html += `
-			<dt>` + person.Name + `</dt>
-			<dd>` + person.BirthYear + `</dd>`
+		html += person.Name + " - " + person.BirthYear + "\n"
 	}
 
-	res.Header().Set("Content-Type", "text/html")
-	fmt.Fprintf(res, `
-		<dl>
-			`+html+`
-		</dl>
-		<form action="/">
-			Go back <input type="submit">
-		</form>`)
+	tpl, err := template.ParseFiles("view.html")
+	if err != nil{
+		log.Fatalln(err)
+	}
+
+	err = tpl.ExecuteTemplate(res, "view.html", html)
+	if err != nil {
+		http.Error(res, err.Error(), 500)
+	}
 }
