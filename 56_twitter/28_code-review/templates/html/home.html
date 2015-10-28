@@ -1,0 +1,18 @@
+{{template "header"}}
+{{template "header2" .}}
+<main>
+    <section>
+        <i class="fa fa-user fa-2x"></i>
+        <p id="post">post</p>
+    </section>
+    <section>
+        <i class="fa fa-user fa-2x"></i>
+        <p id="post">post</p>
+    </section>
+    <section class="userInfo">
+        <p>email: {{.Email}}</p>
+        <p>user: {{.UserName}}</p>
+        <p>logged In: {{.LoggedIn}}</p>
+    </section>
+</main>
+{{template "footer"}}

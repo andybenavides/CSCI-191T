@@ -1,0 +1,76 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    text-align: center;
+    padding-top:10vh;
+    background-image: url("Ideal-landscape.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.style-5 input[type="text"] {
+    padding: 10px;
+    border: solid 1px #fff;
+    -webkit-box-shadow: inset 1px 1px 2px 0 #707070;
+    -moz-box-shadow: inset 1px 1px 2px 0 #707070;
+    box-shadow: inset 1px 1px 2px 0 #707070;
+    -webkit-transition: box-shadow 0.3s;
+    -moz-transition: box-shadow 0.3s;
+    -o-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+.style-5 input[type="text"]:focus, .style-5 input[type="text"].focus {
+    -webkit-box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+    -moz-box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+    box-shadow: inset 1px 1px 2px 0 #c9c9c9;
+}
+
+h1,h2,form{
+    font-family: Baskerville;
+    font-size: 2.5em;
+    padding: 2vh 5vw 5vh 5vw;
+}
+
+.input li{
+   margin-bottom: 2vh;
+}
