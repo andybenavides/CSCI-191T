@@ -11,6 +11,7 @@
     </form>
     <a href="/form/signup" id="create-account">Create account</a>
     {{if .LoginFail}}
-        <p style="color:red; font-size: 2em;">I don't recognize that user name.</p>
+        <p style="color:red; font-size: 2em;">Username or Password entered
+            does not match our records</p>
     {{end}}
 {{template "footer"}}
