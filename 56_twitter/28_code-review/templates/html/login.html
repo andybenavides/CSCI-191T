@@ -1,4 +1,4 @@
-{{template "header"}}
+    {{template "header"}}
 <link rel="stylesheet" href="/public/css/login.css">
 {{template "header2" .}}
     <form method="POST" action="/api/login">
@@ -10,4 +10,7 @@
         <button>Submit</button>
     </form>
     <a href="/form/signup" id="create-account">Create account</a>
+    {{if .LoginFail}}
+        <p style="color:red; font-size: 2em;">I don't recognize that user name.</p>
+    {{end}}
 {{template "footer"}}
