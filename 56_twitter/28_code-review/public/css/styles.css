@@ -85,3 +85,8 @@ section {
 #post {
     padding: 10px;
 }
+
+section.userInfo p{
+    margin: auto;
+    color: #707070;
+}
