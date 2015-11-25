@@ -10,4 +10,5 @@ type SessionData struct {
 	User
 	LoggedIn  bool
 	LoginFail bool
+	DupEmail bool
 }
