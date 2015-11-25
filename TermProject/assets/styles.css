@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Cantarell', sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    margin: 1vw;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+header{
+    height: 7vh;
+    display: table-cell;
+    vertical-align: middle;
+    width: 100vw;
+    box-shadow: 0px 1px 5px 1px gray;
+}
+
+.mainBack{
+    background-image: url("img/businessMeeting.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.home{
+    background: #00264d;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 30vh;
+    display: table;
+    width: 100vw;
+    -moz-box-shadow:    inset 0 -7px 10px -7px #000000;
+    -webkit-box-shadow: inset 0 -7px 10px -7px #000000;
+    box-shadow:         inset 0 -7px 10px -7px #000000;
+}
+
+.titles {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 40vw;
+    height: 30vh;
+}
+
+.main-title{
+    font-size: 3.5em;
+    color: #fff;
+}
+
+.buttons ul{
+    margin-top: 5vh;
+    font-size: 0.8em;
+}
+
+.buttons ul li a{
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 2px solid #cccccc;
+    padding: 10px;
+    background-color: #black;
+    color: #cccccc;
+}
+
+.buttons ul li a:hover{
+    border: 2px solid white;
+    color: white;
+}
+
+.Form li{
+    display:block;
+}
+
+.Form li input{
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    background-color: white;
+    width: 20vw;
+}
+
+.form-titles{
+    color: white;
+    padding: 10px;
+}
+
+.Form{
+    width: 30vw;
+    margin: 10vh auto 10vh auto;
+    padding-bottom: 5vh;
+    border: 2px solid white;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    -moz-box-shadow:    inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow:         inset 0 0 20px #000000;
+}
