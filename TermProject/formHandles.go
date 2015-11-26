@@ -5,15 +5,13 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-type Me struct{
-	Name string
-	Age int
-}
-
 func CreateUser(res http.ResponseWriter, req *http.Request, _ httprouter.Params){
 
-	andy := Me{
-		Name: "Andy",
+	andy := User{
+		FirstName: "Andy",
+		LastName: "Benavides",
+		Email: "andybenavides.22@gmail.com",
+		UserName: "andybenavides.22",
 		Age: 24,
 	}
 	tpl.ExecuteTemplate(res, "homePage.html", andy)

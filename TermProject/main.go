@@ -6,6 +6,21 @@ import(
 	"net/http"
 )
 
+type User struct{
+	FirstName string
+	LastName string
+	Age int
+	UserName string
+	Email string
+	Password string
+}
+
+type SessionData struct{
+	User
+	LoggedIn bool
+	LogInFail bool
+}
+
 var tpl *template.Template
 
 func init(){
