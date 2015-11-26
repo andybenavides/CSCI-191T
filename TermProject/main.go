@@ -9,7 +9,6 @@ import(
 type User struct{
 	FirstName string
 	LastName string
-	Age int
 	UserName string
 	Email string
 	Password string
@@ -30,6 +29,7 @@ func init(){
 	r.GET("/login", Login)
 	r.GET("/signup", SignUp)
 	r.POST("/form/createuser", CreateUser)
+	r.POST("/form/login", UserLogin)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
 	http.Handle("/public/", http.StripPrefix("/public", http.FileServer(http.Dir("public/"))))
 	tpl = template.Must(template.ParseGlob("templates/*.html"))

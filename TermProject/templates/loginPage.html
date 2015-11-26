@@ -3,19 +3,20 @@
 	<section class="home">
 		<div class="titles">
 			<h1 class="main-title">login</h1>
-			<form method="POST" action="/form/createuser">
+			<form method="POST" action="/form/login">
 				<ul class="Form">
 					<li>
 						<p class="form-titles">Username</p>
-						<input type="text" placeholder="enter username">
+						<input type="text" placeholder="enter username" name="userName">
 					</li>
 					<li>
 						<p class="form-titles">Password</p>
-						<input type="text" placeholder="enter password">
+						<input type="password" placeholder="enter password" name="passWord">
 					</li>
 					<li>
 						<input type="submit" value="go">
 					</li>
+					{{.}}
 				</ul>
 			</form>
 		</div>
