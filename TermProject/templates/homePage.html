@@ -3,15 +3,24 @@
 	<section class="home">
 		<div class="titles">
 			<h1 class="main-title">Welcome to my page</h1>
+			{{if .LoggedIn}}
+			<p>You are now logged in</p>
+			<div class="buttons">
+				<ul>
+					<li><a href="/logout">log out</a></li>
+				</ul>
+			</div>
+			{{else}}
 			<div class="buttons">
 				<ul>
 					<li><a href="/login">log in</a></li>
 					<li><a href="/signup">sign up</a></li>
 				</ul>
 			</div>
+			{{end}}
 		</div>
 	</section>
-	{{.}}
-	<section class="mainBack"></section>
+	<section class="mainBack">{{.}}</section>
+
 </body>
 {{template "footer"}}

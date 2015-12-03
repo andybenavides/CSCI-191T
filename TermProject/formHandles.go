@@ -20,7 +20,7 @@ func CreateUser(res http.ResponseWriter, req *http.Request, _ httprouter.Params)
 //
 //	}
 
-	var password, _ = bcrypt.GenerateFromPassword([]byte(req.FormValue("passWord")), 0)
+	var password, _ = bcrypt.GenerateFromPassword([]byte(req.FormValue("passWord")), bcrypt.DefaultCost)
 	user := User{
 		FirstName: req.FormValue("firstName"),
 		LastName: req.FormValue("lastName"),
@@ -36,22 +36,28 @@ func CreateUser(res http.ResponseWriter, req *http.Request, _ httprouter.Params)
 		return
 	}
 
-	tpl.ExecuteTemplate(res, "homePage.html", &user)
+	var sd SessionData
+	sd.LoggedIn = true
+
+	tpl.ExecuteTemplate(res, "homePage.html", &sd)
 }
 
 func UserLogin(res http.ResponseWriter, req *http.Request, _ httprouter.Params){
 	ctx := appengine.NewContext(req)
+	var sd SessionData
 
 	key := datastore.NewKey(ctx, "Users", req.FormValue("userName"), 0, nil)
 	var user User
 	err := datastore.Get(ctx, key, &user)
-	if (err != nil) {
-		var sd SessionData
+	if (err != nil || bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(req.FormValue("passWord"))) != nil) {
 		sd.LogInFail = true
 		tpl.ExecuteTemplate(res, "loginPage.html", sd)
 		return
 	}else {
-		user.UserName = req.FormValue("userName")
-		tpl.ExecuteTemplate(res, "homePage.html", &user)
+		sd.LoggedIn = true
+		sd.UserName = user.UserName
+		tpl.ExecuteTemplate(res, "homePage.html", &sd)
 	}
 }
+
+

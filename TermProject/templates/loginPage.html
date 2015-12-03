@@ -16,8 +16,13 @@
 					<li>
 						<input type="submit" value="go">
 					</li>
-					{{.}}
 				</ul>
+			</form>
+			{{if .LogInFail}}
+				<p>Your username or password is incorrect!</p>
+			{{end}}
+			<form action="/" method="GET">
+				<input type="submit" value="return home">
 			</form>
 		</div>
 	</section>
